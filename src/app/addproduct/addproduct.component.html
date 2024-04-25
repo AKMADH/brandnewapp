@@ -1,0 +1,22 @@
+<h1>Add Product Page</h1>
+<div *ngIf="showSuccessMessage" >
+    <p>Product created successfully!</p>
+  </div>
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form (submit)="addProduct()" class="mt-4">
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" class="form-control" id="productName" placeholder="Enter Product Name" [(ngModel)]="productName" name="productName" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" placeholder="Enter Price" [(ngModel)]="price" name="price" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
